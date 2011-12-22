@@ -15,6 +15,8 @@ class PhotosController < ApplicationController
   def show
     @photo = Photo.find(params[:id])
 	 
+	 @photocomments = @photo.comments
+	 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @photo }

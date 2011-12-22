@@ -8,6 +8,11 @@
 <p>
   <b>User:</b>
   <%= @comment.user_id %>
+  
+  <% userlink = @creator.first_name + " " + @creator.last_name %>
+  <%= link_to( userlink, @creator) %>
+  
+  
 </p>
 
 <p>

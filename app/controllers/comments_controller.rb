@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
   # GET /comments/1.json
   def show
     @comment = Comment.find(params[:id])
+	 @creator = @comment.user
 
     respond_to do |format|
       format.html # show.html.erb

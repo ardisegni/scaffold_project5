@@ -1,13 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>First name:</b>
-  <%= @user.first_name %>
-</p>
+
+
 
 <p>
-  <b>Last name:</b>
-  <%= @user.last_name %>
+<%= @user.first_name %>
+ 
+<%= @user.last_name %>
+</p>
+
+<% @userphotos.each do |photo| %>
+<div>
+<%= image_tag(photo.file_name) %>
+<p>
+<%= photo.date_time  %>
+</p>
+</div>
+ <% end %>
 </p>
 
 

@@ -81,5 +81,6 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :ok }
     end
-  end
+  end  
+  
 end

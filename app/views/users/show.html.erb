@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<div>
+<h2>Flickr-Killer</h2>
+<i> version 0.01 </i>
+Ariel Krakowski and Ariel Di Segni
+</div>
+
+
+
 <h2>
 <%= @user.first_name %> 
 <%= @user.last_name %>
@@ -16,22 +24,19 @@
 <ul>
  <% pcomments.each do |comment| %>
  <li>
- <%= comment.comment %>
- <br/>
-  <% commentor = comment.user %>
+ <% commentor = comment.user %>
   <% userlink = commentor.first_name + " " + commentor.last_name %>
   <%= link_to( userlink, commentor) %>  
-  on
+  
+  <%= comment.comment %>    
+  
   <%= comment.date_time %>
-
  </li>
  <%end%>
  </ul>
- <hr/>
- <br/>
-
- </div>
+ <hr/> 
  <% end %> 
+  </div>
  
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

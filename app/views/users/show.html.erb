@@ -1,11 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<div>
-<h2>Flickr-Killer</h2>
-<i> version 0.01 </i>
-Ariel Krakowski and Ariel Di Segni
-</div>
-
 
 
 <h2>
@@ -13,7 +7,7 @@ Ariel Krakowski and Ariel Di Segni
 <%= @user.last_name %>
 </h2>
 
-<div>
+<div class="userphotos">
 <% @userphotos.each do |photo| %>
 <%= image_tag(photo.file_name) %>
 <p>
@@ -21,7 +15,7 @@ Ariel Krakowski and Ariel Di Segni
 </p>
 
 <% pcomments = photo.comments %>
-<ul>
+<ul class="photo">
  <% pcomments.each do |comment| %>
  <li>
  <% commentor = comment.user %>
@@ -36,6 +30,7 @@ Ariel Krakowski and Ariel Di Segni
  </ul>
  <hr/> 
  <% end %> 
+ 
   </div>
  
 
